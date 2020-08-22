@@ -6,7 +6,6 @@ import io.swagger.annotations.ApiOperation;
 import io.swagger.annotations.ApiResponse;
 import java.util.List;
 import javax.servlet.http.HttpServletResponse;
-import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -27,12 +26,13 @@ public interface IVehicleLocationController {
   @PostMapping
   ResponseEntity registerVehicle(@RequestBody Vehicle vehicle);
 
-  @ApiOperation(value = "Insert Product Data", notes = "Insert Product Data", response = List.class)
+  @ApiOperation(value = "Get Vehicle locations ", notes = "Get Vehicle locations ", response = List.class)
   @ApiResponse(code = HttpServletResponse.SC_OK, message = "Success")
   @PostMapping(value = "/{id}/locations")
-  ResponseEntity update(@PathVariable("id") String id, @RequestBody VehicleLocation body);
+  ResponseEntity insertVehicleLocations(@PathVariable("id") String id,
+      @RequestBody VehicleLocation vehicleLocation);
 
-  @ApiOperation(value = "Return Product information", notes = "Return Product information", response = List.class)
+  @ApiOperation(value = "Deregister Vehicle", notes = "Deregister Vehicle", response = List.class)
   @ApiResponse(code = HttpServletResponse.SC_OK, message = "Success")
   @DeleteMapping(value = "/{id}")
   ResponseEntity delete(@PathVariable("id") String id);

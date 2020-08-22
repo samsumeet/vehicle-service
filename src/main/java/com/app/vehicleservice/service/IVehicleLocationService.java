@@ -7,9 +7,9 @@ import org.springframework.stereotype.Service;
 @Service
 public interface IVehicleLocationService {
 
-  void insert(Vehicle vehicle);
+  void registerVehicle(final Vehicle vehicle);
 
-  void update(String id, VehicleLocation vehicleLocation);
+  void insertVehicleLocations(final String id, final VehicleLocation vehicleLocation);
 
-  void delete(String id);
+  void delete(final String id);
 }
