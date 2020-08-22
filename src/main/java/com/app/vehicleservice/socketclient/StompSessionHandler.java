@@ -1,6 +1,6 @@
 package com.app.vehicleservice.socketclient;
 
-import com.app.locationsapi.model.BroadcastEvent;
+import com.app.vehicleservice.model.BroadcastLocationEvent;
 import java.lang.reflect.Type;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -13,8 +13,6 @@ import org.springframework.messaging.simp.stomp.StompSessionHandlerAdapter;
  * This class is an implementation for <code>StompSessionHandlerAdapter</code>.
  * Once a connection is established, We subscribe to /topic/messages and 
  * send a sample message to server.
- * 
- * @author sumeet.bachchas
  *
  */
 public class StompSessionHandler extends StompSessionHandlerAdapter {
@@ -37,12 +35,12 @@ public class StompSessionHandler extends StompSessionHandlerAdapter {
 
     @Override
     public Type getPayloadType(StompHeaders headers) {
-        return BroadcastEvent.class;
+        return BroadcastLocationEvent.class;
     }
 
     @Override
     public void handleFrame(StompHeaders headers, Object payload) {
-    	BroadcastEvent msg = (BroadcastEvent) payload;
+        BroadcastLocationEvent msg = (BroadcastLocationEvent) payload;
         logger.info("Received : " + msg.getId() + " from : " + msg.getLocation().getLat());
     }
 
