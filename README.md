@@ -71,11 +71,4 @@ so many benefits for e.g testing,
 ### Test Cases
 I have added some test cases for example, we can follow these test and write different type of test cases.
 
-### API
-
-Search API : 
-URL : /vehicle/search?searchQuery=color:blue,make:vw
-METHOD: GET
-
-Note: For searching we have to use key value pair for e.g color:blue,make:vw
 
