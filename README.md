@@ -1,36 +1,12 @@
 # Getting Started
 
-### Approach to solve the problem 
-Problems:
-* 1st problem is to parse to csv in memory efficient way by not loading whole csv into memory.
-* Search functionality is pretty complex because it can have n numbers of rules
-
-Ideas:
-* Much more complex search functionality for e.g OR,greater/less than with help of Specifications 
-only like I already implemented
-* Better error handling          
-
-Decisions:
-* Looped through the csv isntead of loading the whole file to memory because it might 
-throw OutOfMemory Exception otherwise.
-* I have used Specification for implementing Search functionality because it provides us 
-the powerful queries that will become really messed up if try to implement manually.
-* Used lombok to make code clean.
-* Used JPA because it provides powerful api for interaction with Database.
-* Used Swagger to provide API documentation.
-
-Architecture: 
-* Used Dependency Inversion and injection to interact with different layers because of 
-so many benefits for e.g testing, 
-* It's easier to provide also the interface to somebody if he/she want to check out the API Design.
-
 ### Guide
 
 * To run this project you need to install Java 8 and Maven. You can find it here (https://maven.apache.org/download.cgi)
 
 * After installing maven you can run this project manually as defined below:
 	
-	> cd heycar
+	> cd vehicle-service
 	
 	> mvn clean install
 	> java -jar target/vehicle-location-service-0.0.1-SNAPSHOT.jar
@@ -41,7 +17,7 @@ so many benefits for e.g testing,
 
 * or you can run it with start.sh (Shell Script) with following command:
 
-		    > cd heycar
+		    > cd vehicle-service
 			> ./start.sh
 
 	Note : This will create docker container and our application in that with port 8080.
