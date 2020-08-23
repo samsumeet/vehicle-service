@@ -1,0 +1,11 @@
+
+>
+java:S1148."#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ
+>
+java:S11480"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ
+m
+java:S1128"RRemove this unused import 'org.springframework.messaging.simp.stomp.StompSession'.(ªÇäıÿÿÿÿ
+\
+java:S2142/"FEither re-interrupt this method or rethrow the "InterruptedException".(ä ¹€
+Z
+java:S2147/"DCombine this catch with the one at line 45, which has the same body.(ä ¹€

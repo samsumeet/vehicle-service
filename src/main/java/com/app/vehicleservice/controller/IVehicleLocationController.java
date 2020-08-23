@@ -29,11 +29,11 @@ public interface IVehicleLocationController {
   @ApiOperation(value = "Get Vehicle locations ", notes = "Get Vehicle locations ", response = List.class)
   @ApiResponse(code = HttpServletResponse.SC_OK, message = "Success")
   @PostMapping(value = "/{id}/locations")
-  ResponseEntity insertVehicleLocations(@PathVariable("id") String id,
+  ResponseEntity updateVehicleLocation(@PathVariable("id") String id,
       @RequestBody VehicleLocation vehicleLocation);
 
   @ApiOperation(value = "Deregister Vehicle", notes = "Deregister Vehicle", response = List.class)
   @ApiResponse(code = HttpServletResponse.SC_OK, message = "Success")
   @DeleteMapping(value = "/{id}")
-  ResponseEntity delete(@PathVariable("id") String id);
+  ResponseEntity deregisterVehicle(@PathVariable("id") String id);
 }

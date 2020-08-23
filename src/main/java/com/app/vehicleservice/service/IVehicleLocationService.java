@@ -9,7 +9,7 @@ public interface IVehicleLocationService {
 
   void registerVehicle(final Vehicle vehicle);
 
-  void insertVehicleLocations(final String id, final VehicleLocation vehicleLocation);
+  void updateVehicleLocation(final String id, final VehicleLocation vehicleLocation);
 
-  void delete(final String id);
+  void deregisterVehicle(final String id);
 }

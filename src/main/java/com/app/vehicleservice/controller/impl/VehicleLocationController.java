@@ -22,17 +22,17 @@ public class VehicleLocationController implements IVehicleLocationController {
   }
 
   @Override
-  public ResponseEntity insertVehicleLocations(String id, VehicleLocation vehicleLocation) {
+  public ResponseEntity updateVehicleLocation(String id, VehicleLocation vehicleLocation) {
 
-    vehicleLocationService.insertVehicleLocations(id, vehicleLocation);
+    vehicleLocationService.updateVehicleLocation(id, vehicleLocation);
     return ResponseEntity.accepted().build();
   }
 
 
   @Override
-  public ResponseEntity delete(String id) {
+  public ResponseEntity deregisterVehicle(String id) {
 
-    vehicleLocationService.delete(id);
+    vehicleLocationService.deregisterVehicle(id);
     return ResponseEntity.accepted().build();
   }
 }
